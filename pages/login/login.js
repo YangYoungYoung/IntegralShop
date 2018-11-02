@@ -2,8 +2,8 @@
 var network = require("../../utils/network.js")
 var common = require("../../utils/common.js")
 var app = getApp()
-var parentOpenId = null;
-var shopId = null;
+var parentOpenId = "";
+var shopId = "";
 Page({
 
   /**
@@ -20,10 +20,10 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-    if (options.shopId != null) {
+    if (options.shopId != null && options.shopId!=undefined) {
       shopId = options.shopId;
     }
-    if (options.openId != null) {
+    if (options.openId != null && options.openId != undefined) {
       parentOpenId = options.openId;
     }
     var that = this

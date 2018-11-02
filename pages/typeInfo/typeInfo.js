@@ -48,5 +48,12 @@ Page({
 
   },
 
-  
+  //跳转到详情页
+  toDetail: function (event) {
+    var id = event.currentTarget.dataset.id;
+    // console.log("当前点击的是："+id);
+    wx.navigateTo({
+      url: '../detail/detail?goodId=' + id,
+    })
+  },
 })
