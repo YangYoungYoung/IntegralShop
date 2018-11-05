@@ -23,7 +23,7 @@
                     <view class="text-box">
                         <view class="goods-title">{{item.goodName}}</view>
                         
-                        <view class="goods-price">¥ {{item.goodPrice}}</view>
+                        <view class="goods-price">¥ {{item.integral}}</view>
                         <view class="buy-num">
                             <view class="jian-btn {{item.number==1? 'disabled' : ''}}" catchtap="jianBtnTap" data-index="{{index}}">-</view>
                             <input  type="number" value="{{item.number}}" disabled/>

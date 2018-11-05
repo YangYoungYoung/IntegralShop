@@ -154,6 +154,7 @@ Page({
     var orderPath = that.data.orderPath;
     var goodName = that.data.goodName;
     var goodPrice = that.data.goodPrice;
+    var integral = that.data.integral;
     var number = that.data.num
     console.log("当前数量是："+number);
     var cartResult = new Array();
@@ -164,6 +165,7 @@ Page({
       goodName: goodName,
       orderPath: orderPath,
       active: true,
+      integral: integral,
       number:number
     };
     var oldcartResult = new Array;

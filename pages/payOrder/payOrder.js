@@ -13,7 +13,7 @@ Page({
   data: {
     showAddr: false,
     showAddAddr: true,
-    totalMoney: 0,
+    totalMoney: 0,//总金额
     detail: [],
 
   },
@@ -95,12 +95,10 @@ Page({
     var list = that.data.detail;
     console.log("点击前的状态是" + list[parseInt(index)].checked);
     if (index != null) {
-      
-      
       //优惠券
       var coupon = list[parseInt(index)].coupon.coupon
       //当前总金额
-      var money = list[parseInt(index)].totalMoney
+      var money = that.data.totalMoney
       //如果之前是选中的状态
       if (list[parseInt(index)].checked) {
        
@@ -109,7 +107,6 @@ Page({
           detail: list,
           totalMoney: money
         })
-       
       } else {
        
         list[parseInt(index)].checked = true;
@@ -119,7 +116,6 @@ Page({
           totalMoney: money
         })
       }
-
     }
   },
   //支付
@@ -206,7 +202,9 @@ Page({
       network.POST(url, params, method).then((res) => {
         wx.hideLoading();
         // console.log("支付的返回值是：" + res.data);
-
+        wx.navigateTo({
+          url: '../order/order?id=1',
+        })
       }).catch((errMsg) => {
         wx.hideLoading();
         console.log(errMsg); //错误提示信息

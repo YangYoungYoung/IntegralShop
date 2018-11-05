@@ -133,7 +133,7 @@ Page({
     for (var i = 0; i < list.length; i++) {
       var curItem = list[i];
       if (curItem.active) {
-        total += parseFloat(curItem.goodPrice) * curItem.number;
+        total += parseFloat(curItem.integral) * curItem.number;
       }
     }
     return total;

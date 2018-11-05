@@ -6,17 +6,17 @@ var defaulContentType = 'application/x-www-form-urlencoded; charset=UTF-8';
 
 function POST(url, params,method,contenTTypeCust) {
   //dev
-  console.log('dev - url',url) ;
-  console.log('dev - param',params) ; 
-  console.log('dev - method',method) ; 
-  console.log('dev - contenTTypeCust',contenTTypeCust) ;
+  // console.log('dev - url',url) ;
+  // console.log('dev - param',params) ; 
+  // console.log('dev - method',method) ; 
+  // console.log('dev - contenTTypeCust',contenTTypeCust) ;
 
   var contentType = defaulContentType ;
 
   //console.log('typeof contenTTypeCust --- ', typeof contenTTypeCust);
   if (typeof contenTTypeCust != 'undefined') {
     //dev
-    console.log("in if (typeof contenTTypeCust != undefined) {")
+    // console.log("in if (typeof contenTTypeCust != undefined) {")
 
     contentType == contenTTypeCust ;
   }
